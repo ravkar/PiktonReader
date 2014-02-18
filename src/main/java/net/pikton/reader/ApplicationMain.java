@@ -3,7 +3,6 @@ package net.pikton.reader;
 import net.pikton.reader.config.ReaderConfiguration;
 import net.pikton.reader.impl.ReaderEngineImpl;
 import net.pikton.server.handler.ReaderServerHandler;
-
 import org.eclipse.jetty.server.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

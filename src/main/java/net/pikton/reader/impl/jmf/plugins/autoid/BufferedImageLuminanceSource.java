@@ -16,9 +16,9 @@ package net.pikton.reader.impl.jmf.plugins.autoid;
  */
 
 
-import java.awt.image.BufferedImage;
-
 import com.google.zxing.LuminanceSource;
+
+import java.awt.image.BufferedImage;
 
 /**
  * This LuminanceSource implementation is meant for J2SE clients and our blackbox unit tests.

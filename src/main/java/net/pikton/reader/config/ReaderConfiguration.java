@@ -1,12 +1,12 @@
 package net.pikton.reader.config;
 
-import java.awt.Dimension;
+import net.pikton.reader.ReaderEngineException;
+
+import java.awt.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
-
-import net.pikton.reader.ReaderEngineException;
 
 
 public class ReaderConfiguration {

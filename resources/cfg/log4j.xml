@@ -29,7 +29,7 @@
     </appender>  
     
     <category name="net.pikton" additivity="true">
-        <priority value ="DEBUG" />
+        <priority value ="INFO" />
         <appender-ref ref="reader-stdout"/>         
         <appender-ref ref="reader-trace"/>
     </category>

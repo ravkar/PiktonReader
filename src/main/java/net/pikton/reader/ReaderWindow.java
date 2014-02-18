@@ -1,21 +1,18 @@
 package net.pikton.reader;
 
 
-import java.awt.Component;
-import java.awt.Dimension;
+import net.pikton.reader.config.ReaderConfiguration;
+import net.pikton.reader.impl.ReaderEngineImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
-import javax.swing.JFrame;
-
-import net.pikton.reader.config.ReaderConfiguration;
-import net.pikton.reader.impl.ReaderEngineImpl;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class ReaderWindow extends JFrame{
 

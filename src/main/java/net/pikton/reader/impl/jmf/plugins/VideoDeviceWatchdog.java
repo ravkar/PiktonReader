@@ -1,16 +1,15 @@
 package net.pikton.reader.impl.jmf.plugins;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-
 import net.pikton.reader.ReaderListener;
 import net.pikton.reader.ReaderObservable;
 import net.pikton.reader.VideoDeviceEvent;
 import net.pikton.reader.VideoDeviceListener;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class VideoDeviceWatchdog implements Runnable, ReaderObservable{
 	static Logger logger = LoggerFactory.getLogger(VideoDeviceWatchdog.class);		

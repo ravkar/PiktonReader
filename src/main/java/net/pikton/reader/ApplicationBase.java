@@ -1,10 +1,9 @@
 package net.pikton.reader;
 
-import java.io.File;
-
 import net.pikton.reader.config.ReaderConfiguration;
-
 import org.apache.log4j.xml.DOMConfigurator;
+
+import java.io.File;
 
 
 public class ApplicationBase {

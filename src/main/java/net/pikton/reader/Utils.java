@@ -1,21 +1,14 @@
 package net.pikton.reader;
 
-import java.io.IOException;
-import java.io.InputStream;
-
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.SourceDataLine;
-
 import net.pikton.reader.config.ReaderConfiguration;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.sound.sampled.*;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class Utils {
 

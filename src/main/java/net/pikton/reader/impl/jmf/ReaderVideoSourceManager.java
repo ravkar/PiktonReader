@@ -1,8 +1,9 @@
 package net.pikton.reader.impl.jmf;
 
-import java.awt.Dimension;
-import java.util.HashMap;
-import java.util.Map;
+import net.pikton.reader.ReaderEngineException;
+import net.pikton.reader.config.ReaderConfiguration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.media.Format;
 import javax.media.Manager;
@@ -11,12 +12,9 @@ import javax.media.control.FormatControl;
 import javax.media.format.VideoFormat;
 import javax.media.protocol.CaptureDevice;
 import javax.media.protocol.DataSource;
-
-import net.pikton.reader.ReaderEngineException;
-import net.pikton.reader.config.ReaderConfiguration;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 

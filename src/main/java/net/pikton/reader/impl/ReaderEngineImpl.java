@@ -1,23 +1,16 @@
 package net.pikton.reader.impl;
 
-import java.awt.Component;
-import java.util.LinkedList;
-import java.util.List;
-
-import net.pikton.reader.Registration;
-import net.pikton.reader.ReaderEngine;
-import net.pikton.reader.ReaderEngineException;
-import net.pikton.reader.ReaderListener;
-import net.pikton.reader.ReaderObservable;
-import net.pikton.reader.ReaderWindow;
-import net.pikton.reader.VideoDeviceListener;
+import net.pikton.reader.*;
 import net.pikton.reader.config.ReaderConfiguration;
 import net.pikton.reader.impl.jmf.ReaderVideoProcessorManager;
 import net.pikton.reader.impl.jmf.ReaderVideoSourceManager;
 import net.pikton.reader.impl.jmf.plugins.VideoDeviceWatchdog;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.awt.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * 
@@ -40,10 +33,8 @@ public class ReaderEngineImpl implements ReaderEngine, ReaderObservable{
     
     private VideoDeviceListener videoDeviceListenerImpl;
     
-    private Registration licenseChecker;
-        
+
 	public ReaderEngineImpl() throws ReaderEngineException{				
-		licenseChecker = new Registration(); 
 		readerListeners = new LinkedList<ReaderListener>();
 		readerResults = new LinkedList<String>();	
 		readerWindow = new ReaderWindow(this);	

@@ -1,33 +1,19 @@
 package net.pikton.reader.impl.jmf;
 
-import java.awt.Component;
-import java.util.List;
-
-import javax.media.Codec;
-import javax.media.ConfigureCompleteEvent;
-import javax.media.ControllerClosedEvent;
-import javax.media.ControllerEvent;
-import javax.media.ControllerListener;
-import javax.media.EndOfMediaEvent;
-import javax.media.Manager;
-import javax.media.PrefetchCompleteEvent;
-import javax.media.Processor;
-import javax.media.RealizeCompleteEvent;
-import javax.media.ResourceUnavailableEvent;
-import javax.media.StopByRequestEvent;
-import javax.media.UnsupportedPlugInException;
-import javax.media.control.TrackControl;
-import javax.media.format.VideoFormat;
-import javax.media.protocol.DataSource;
-
 import net.pikton.reader.ReaderEngineException;
 import net.pikton.reader.ReaderListener;
 import net.pikton.reader.ReaderObservable;
 import net.pikton.reader.config.ReaderConfiguration;
-import net.pikton.reader.impl.jmf.plugins.autoid.PiktonFrameDecoder;
-
+import net.pikton.reader.impl.jmf.plugins.autoid.FrameDecoderZxing;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.media.*;
+import javax.media.control.TrackControl;
+import javax.media.format.VideoFormat;
+import javax.media.protocol.DataSource;
+import java.awt.*;
+import java.util.List;
 
 /**
  * 
@@ -109,7 +95,7 @@ public class ReaderVideoProcessorManager  implements ControllerListener{
 		//TODO refactor - configure plugins passed from PluginManager  
 		Codec codec[];
 		try {			
-			PiktonFrameDecoder piktonFrameDecoder = new PiktonFrameDecoder(ReaderConfiguration.getInstance()); 
+			FrameDecoderZxing piktonFrameDecoder = new FrameDecoderZxing(ReaderConfiguration.getInstance());
 			((ReaderObservable)piktonFrameDecoder).addReaderListener(new ReaderListenerImpl());
 			codec = new Codec[1];			
 			codec[0] = piktonFrameDecoder;

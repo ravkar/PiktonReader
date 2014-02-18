@@ -1,20 +1,14 @@
 package net.pikton.reader;
 
+import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.SourceDataLine;
  
 public class Play {
    /** Plays audio from given file names. */
    public static void main( String [] args ) throws Exception {
-	   InputStream fileStream = Play.class.getResourceAsStream( "/ding.wav" );
+	   InputStream fileStream = Play.class.getResourceAsStream( "/beep.wav" );
 	   
 //	   InputStream in = getClass().getResourceAsStream("/sound.mid");	   
 	   

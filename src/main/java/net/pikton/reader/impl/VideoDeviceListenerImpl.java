@@ -4,7 +4,6 @@ import net.pikton.reader.ReaderEngine;
 import net.pikton.reader.ReaderEngineException;
 import net.pikton.reader.VideoDeviceEvent;
 import net.pikton.reader.VideoDeviceListener;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

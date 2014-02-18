@@ -7,25 +7,24 @@
   <groupId>net.pikton</groupId>
   <artifactId>pikton-reader-app</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>net.pikton.ReaderApp</name>
   
   <properties>
       <maven.compiler.source>1.5</maven.compiler.source>
       <maven.compiler.target>1.5</maven.compiler.target>
       <jettyVersion>7.2.0.v20101020</jettyVersion>
-      <zxingVersion>1.0</zxingVersion>   
+      <zxingVersion>2.0</zxingVersion>
       <readerMainClass>net.pikton.reader.ApplicationMain</readerMainClass>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>              
   </properties>
 
   <dependencies>
     <dependency>
-    <artifactId>core</artifactId>
-    <groupId>zxing</groupId>
-      <version>${zxingVersion}</version>
-      <scope>compile</scope>          
-    </dependency>  
+          <groupId>com.google.zxing</groupId>
+          <artifactId>core</artifactId>
+          <version>${zxingVersion}</version>
+    </dependency>
     
 	<dependency>
 	    <groupId>org.json</groupId>

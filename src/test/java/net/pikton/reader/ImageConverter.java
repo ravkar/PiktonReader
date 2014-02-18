@@ -16,21 +16,19 @@
 
 package net.pikton.reader;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.net.URI;
-
-import javax.imageio.ImageIO;
-
-import net.pikton.reader.impl.jmf.plugins.autoid.BufferedImageLuminanceSource;
-
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.LuminanceSource;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.common.BitArray;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
+import net.pikton.reader.impl.jmf.plugins.autoid.BufferedImageLuminanceSource;
+
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.URI;
 
 /**
  * A utility application for evaluating the effectiveness of various thresholding algorithms.
