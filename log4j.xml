@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="reader-stdout" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{HH:mm:ss,SSS} [%p] %C{3}.%M[%L]: %m%n"/>
+        </layout>
+    </appender>
+  
+    <appender name="reader-trace-devel" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="file" value="${reader.log}/reader.log"/> 
+<!--         <param name="file" value="../log/trace-devel-reader.log"/> -->   
+        <param name="datePattern" value="'.'yyyy-MM-dd"/>
+        <param name="append" value="true"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{HH:mm:ss,SSS} [%p] %C{3}.%M[%L]: %m%n"/>
+        </layout>
+    </appender>
+    
+    <appender name="reader-trace" class="org.apache.log4j.RollingFileAppender">
+        <param name="file" value="${reader.log}/trace-reader.log"/> 
+ <!--         <param name="file" value="../log/trace-reader.log"/> -->    
+        <param name="maxFileSize" value="5MB"/>
+        <param name="maxBackupIndex" value="1"/>
+        <param name="append" value="true"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p - %m%n"/>
+        </layout>
+    </appender>  
+    
+    <category name="net.pikton" additivity="true">
+        <priority value ="DEBUG" />
+         <appender-ref ref="reader-stdout"/> 
+         <appender-ref ref="reader-trace"/>
+        <!--<appender-ref ref="reader-trace-devel"/>-->
+    </category>
+    
+    <category name="org.eclipse" additivity="true">
+        <priority value ="INFO" />
+        <!-- <appender-ref ref="reader-stdout"/> -->
+        <appender-ref ref="reader-trace"/>
+        <!--<appender-ref ref="reader-trace-devel"/>-->
+    </category>     
+
+</log4j:configuration>
