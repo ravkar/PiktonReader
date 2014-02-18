@@ -156,10 +156,7 @@
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <version>2.2</version>
-        <configuration>        
-<!--          <descriptorRefs>-->
-<!--            <descriptorRef>jar-with-dependencies</descriptorRef>          -->
-<!--          </descriptorRefs>-->
+        <configuration>
           <descriptors>
             <descriptor>src/main/assembly/pikton-reader-bin.xml</descriptor>
           </descriptors>                    

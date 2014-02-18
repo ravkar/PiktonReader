@@ -19,11 +19,18 @@ public class ApplicationMain extends ApplicationBase {
 		} catch (Throwable e) { 
 			logger.error("Reader engine initialization failed.", e);
 			System.exit(-1);
-		}								
-		Server server = new Server(ReaderConfiguration.getInstance().getReaderPort());
-		server.setHandler(new ReaderServerHandler(reader));
-				
-		server.start();
-		server.join();	
+		}
+
+        int port = -1;
+        try{
+            port = ReaderConfiguration.getInstance().getReaderPort();
+            Server server = new Server(port);
+            server.setHandler(new ReaderServerHandler(reader));
+            server.start();
+
+            server.join();
+        } catch (Throwable e) {
+            logger.error("Callback-server initialization failed. Check security settings to listen on TCP port " + port, e);
+        }
 	}
 }

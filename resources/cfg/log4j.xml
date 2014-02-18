@@ -35,7 +35,7 @@
     </category>
     
     <category name="org.eclipse" additivity="true">
-        <priority value ="DEBUG" />
+        <priority value ="WARN" />
          <appender-ref ref="reader-stdout"/> 
          <appender-ref ref="reader-trace"/>
     </category>     
