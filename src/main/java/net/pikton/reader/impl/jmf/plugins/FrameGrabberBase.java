@@ -40,35 +40,28 @@ public abstract class FrameGrabberBase implements Effect, ReaderObservable{
 		readerListeners = new ArrayList<ReaderListener>();			
 	}
 	
-	@Override
-	public void close() {		
+	public void close() {
 	}
 	
-	@Override
 	public abstract String getName();
 
 
-	@Override
 	public void open() throws ResourceUnavailableException {
 		logger.debug(Thread.currentThread() + " started watchdog.");		
 	}
 
-	@Override
 	public void reset() {
 	}
 
-	@Override
 	public Format[] getSupportedInputFormats() {
 		return inputFormats;
 	}
 
-	@Override
 	public Format[] getSupportedOutputFormats(Format arg0) {
 		return outputFormats;
 	}
 
-	@Override
-	public int process(Buffer inBuffer, Buffer outBuffer) {	
+	public int process(Buffer inBuffer, Buffer outBuffer) {
 		VideoDeviceWatchdog.getInstance().reset();
 		Dimension sizeIn = ((RGBFormat)inBuffer.getFormat()).getSize();
 		BufferedImage bimage = new BufferedImage(sizeIn.width,sizeIn.height,BufferedImage.TYPE_INT_RGB);
@@ -82,14 +75,12 @@ public abstract class FrameGrabberBase implements Effect, ReaderObservable{
 	
 	public abstract int process(BufferedImage aBufferedImage); 
 	
-	@Override
 	public void addReaderListener(ReaderListener aListener){
 		synchronized(readerListeners){
 			readerListeners.add(aListener);
 		}
 	}
 	
-	@Override
 	public void removeReaderListener(ReaderListener aListener){
 		synchronized(readerListeners){
 			readerListeners.remove(aListener);
@@ -104,24 +95,20 @@ public abstract class FrameGrabberBase implements Effect, ReaderObservable{
 		}
 	}
 	
-	@Override
 	public Format setInputFormat(Format anInputFormat) {
 		inputFormat = anInputFormat;
 		return anInputFormat;		
 	}
 
-	@Override
 	public Format setOutputFormat(Format anOutputFormat) {
 		outputFormat = anOutputFormat;
 		return anOutputFormat;
 	}
 
-	@Override
 	public Object getControl(String arg0) {
 		return null;
 	}
 
-	@Override
 	public Object[] getControls() {
 		return new Control[0];
 	}		

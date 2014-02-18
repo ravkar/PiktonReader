@@ -32,7 +32,7 @@ public class PiktonFrameDecoder extends FrameGrabberBase {
 	static Logger logger = LoggerFactory.getLogger(PiktonFrameDecoder.class);
 
 	static String WARN = "Enter Pikton license key.";
-	static String INFO = "Licensed to: Rafal Warno - Pikton R&D";
+	static String INFO = "Licensed to: Rafal Warno ";
 
 	volatile boolean recognized;
 
@@ -154,7 +154,6 @@ public class PiktonFrameDecoder extends FrameGrabberBase {
 			}
 		}
 
-		@Override
 		public void run() {
 			numOfThreads++;
 			logger.debug("numOfThreadrs->" + numOfThreads);

@@ -51,8 +51,7 @@ public class ReaderEngineImpl implements ReaderEngine, ReaderObservable{
 		VideoDeviceWatchdog.getInstance().addReaderListener(videoDeviceListenerImpl);		
 	}
  
-	@Override	
-	public synchronized void connect() throws ReaderEngineException{	
+	public synchronized void connect() throws ReaderEngineException{
 		VideoDeviceWatchdog.getInstance().setActive(true);			
 		if (!readerStarted){
 			try
@@ -81,7 +80,6 @@ public class ReaderEngineImpl implements ReaderEngine, ReaderObservable{
 		}		
 	}
 
-	@Override
 	public synchronized void disconnect() throws ReaderEngineException{
 		VideoDeviceWatchdog.getInstance().setActive(false);				
 		if (readerStarted){		
@@ -102,19 +100,16 @@ public class ReaderEngineImpl implements ReaderEngine, ReaderObservable{
 		return processorManager.getControlPanelComponent();
 	}
 	
-	@Override
 	public ReaderWindow getReaderWindow() {
 		return readerWindow;
 	}
 
-	@Override
 	public void addReaderListener(ReaderListener aListener) {
 		synchronized(readerListeners){
 			readerListeners.add(aListener);
 		}
 	}
 
-	@Override
 	public void removeReaderListener(ReaderListener aListener) {
 		synchronized(readerListeners){
 			readerListeners.remove(aListener);
@@ -143,7 +138,6 @@ public class ReaderEngineImpl implements ReaderEngine, ReaderObservable{
 			t.interrupt();
 		}		
 		
-		@Override
 		public void run() {
 			do{
 				synchronized(readerResults){

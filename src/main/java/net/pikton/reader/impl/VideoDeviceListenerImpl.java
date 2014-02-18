@@ -18,11 +18,9 @@ public class VideoDeviceListenerImpl implements VideoDeviceListener{
 		readerEngine = anEngine;
 	}
 
-	@Override
 	public void onFrameEvent(Object o) {
 	}
 
-	@Override
 	public void onVideoDeviceEvent(int anEvent) {
 		 switch(anEvent){
 		 	case VideoDeviceEvent.EVENT_DISCONNECTED:

@@ -40,14 +40,12 @@ public class VideoDeviceWatchdog implements Runnable, ReaderObservable{
 		return instance;
 	}
 		
-	@Override
 	public void addReaderListener(ReaderListener aListener){
 		synchronized(videoDeviceListeners){
 			videoDeviceListeners.add((VideoDeviceListener)aListener);
 		}
 	}
 	
-	@Override
 	public void removeReaderListener(ReaderListener aListener){
 		synchronized(videoDeviceListeners){
 			videoDeviceListeners.remove(aListener);
@@ -75,7 +73,6 @@ public class VideoDeviceWatchdog implements Runnable, ReaderObservable{
 		timer = 0;
 	}
 			
-	@Override
 	public void run() {
 		while(!thread.isInterrupted()){
 			synchronized(lock){

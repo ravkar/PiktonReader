@@ -47,7 +47,7 @@ public class ReaderServerHandler extends AbstractHandler
 	    	final Object lockObj = new Object();
 
 	    	((ReaderObservable)readerEngine).addReaderListener(localListener = new net.pikton.reader.ReaderListener(){
-				@Override
+
 				public void onFrameEvent(Object aResult) {
 			    	logger.debug("onEvent->" + aResult);				
 					synchronized(lockObj){

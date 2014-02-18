@@ -171,7 +171,6 @@ public class ReaderVideoProcessorManager  implements ControllerListener{
 	}    
 	
 	class ReaderListenerImpl implements ReaderListener {				
-		@Override
 		public void onFrameEvent(Object o) {
 			logger.info("fire Frame Event->" + o);			
 			synchronized(readerResults){
