@@ -1,5 +1,5 @@
  
-PiktonReader - low cost, fast, 2D barcode scanner
+PiktonReader - low cost 2D barcode scanner
 =============
 What is Pikton? - like photons/electrons are particles transporting light/electricity, then so called piktons (e.g. QR, DM codes) are carriers transporting digitally secured,encrypted information.
 
