@@ -1,13 +1,10 @@
  
-PiktonReader - low cost 2D barcode scanner
+PiktonReader - 2D barcode scanner application
 =============
-What is Pikton? - like photons/electrons are particles transporting light/electricity, then so called piktons (e.g. QR, DM codes) are carriers transporting digitally secured,encrypted information.
-
-This project is focusing on building low cost, fast, 2D scanner suited for reading form mobile phone displays. 
-The scanner is very well suited for Enterprise Integration Patterns based integrations.
+2D scanner application suited for reading 2D codes.
 
 Technology: 
-- Zxing library (great job) 
+- Zxing library
 - Sun JMF API - framework used for video stream processing in java 
 - low cost web camera (usb uvc class compliant) 
 
@@ -17,4 +14,4 @@ Supported OS:
 Required:
 - java jre 32 bit
 
-Note: port  to linux/Raspberry Pi is in progress   
+Note: port  to linux/Raspberry Pi is in progress
