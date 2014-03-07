@@ -3,7 +3,7 @@ PiktonReader - 2D barcode scanner
 =============
 ###scanner suited for reading 2D codes 
 
-###Technology: 
+###Technology stack: 
 - Zxing - library for 1D/2D barcodes deccoding (https://github.com/zxing/zxing)
 - Sun JMF API - framework used for video stream processing in java 
 - web cam (usb uvc class compliant) 
