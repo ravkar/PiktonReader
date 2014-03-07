@@ -1,7 +1,7 @@
  
-PiktonReader - 2D barcode scanner
+PiktonReader - 2D barcode scanner ![Pikton](http://www.rafalwarno.pl/wp-content/uploads/2014/03/logo.png)
 =============
-###scanner suited for reading 2D codes http://www.rafalwarno.pl/wp-content/uploads/2014/03/logo.png
+###scanner suited for reading 2D codes 
 
 ###Technology: 
 - Zxing - library for 1D/2D barcodes deccoding (https://github.com/zxing/zxing)
