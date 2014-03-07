@@ -1,5 +1,5 @@
- 
-PiktonReader - 2D barcode scanner ![Pikton](http://www.rafalwarno.pl/wp-content/uploads/2014/03/logo.png)
+![Pikton](http://www.rafalwarno.pl/wp-content/uploads/2014/03/logo.png)
+PiktonReader - 2D barcode scanner
 =============
 ###scanner suited for reading 2D codes 
 
